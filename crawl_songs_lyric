@@ -47,4 +47,3 @@ for i in range(len(songs_data)):
 with open("songs_data.json", "w", encoding="utf-8") as f:
     json.dump(songs_data, f, ensure_ascii=False, indent=4)
 
-
