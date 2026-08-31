@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!-- http://127.0.0.1:8000/ -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐网站 - 歌曲列表</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>音乐网站</h1>
+        <a class="active" href="{% url 'songs:song_list' %}"> <!-- songs是应用，song_list是视图函数名 -->
+            歌曲列表
+        </a>
+        <a href="#">歌手列表</a>
+        <a href="#">搜索</a>
+    </header>
+</body>
+
+<main>
+    <div>
+        <h2>全部歌曲</h2>
+        <span>
+            共 {{ page_obj.paginator.count }} 首歌曲
+        </span>
+    </div>
+
+    <!-- 歌曲列表 -->
+    {% if page_obj.object_list %}
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>歌曲</th>
+                    <th>歌手</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in page_obj.object_list %}
+                    <tr>
+                        <td>{{ page_obj.start_index|add:forloop.counter0 }}</td>
+                        <td>
+                            <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
+                            <a href="/songs/{{ song.song_id }}/">
+                                    {{ song.name }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ song.artist_name }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+    <!-- 分页 -->
+    {% if page_obj.paginator.num_pages > 1 %}
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">首页</a>
+                <a href="?page={{ page_obj.previous_page_number }}">上一页</a>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">尾页</a>
+                {% else %}
+                    <span>下一页</span>
+                    <span>尾页</span>
+                {% endif %}
+            {% else %}
+                <span>首页</span>
+                <span>上一页</span>
+                <a href="?page={{ page_obj.next_page_number }}">下一页</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">尾页</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</main>
+
+</html>

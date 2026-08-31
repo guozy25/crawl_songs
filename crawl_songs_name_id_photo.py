@@ -3,7 +3,9 @@ import json
 import random
 import time
 
-
+"""
+没有歌词的歌手：20508，Michita
+"""
 req_Id = "34db7c10-a395-11f1-bf50-0d4e3c47e2e9"
 Secret = "683af2f8796a5c48ac5f97e539c0f37f66b8a1934490f27e62e54febbeef31e802ca9ddd"
 cookies = {

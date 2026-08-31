@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ song.name }} - 歌曲详情</title>
+</head>
+
+<body>
+<header>
+    <h1>音乐网站</h1>
+
+    <nav>
+        <a href="{% url 'songs:song_list' %}">歌曲列表</a>
+        <a href="#">歌手列表</a>
+        <a href="#">搜索</a>
+    </nav>
+</header>
+<main>
+    {% if song.photo_url %}
+    <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
+    {% endif %}
+    <h2>{{ song.name }}</h2>
+    <p>
+        歌手：
+        <a class="artist-link" href="#">{{ song.artist_name }}</a>
+    </p>
+
+    <h3>歌词</h3>
+    {% if song.lyric %}
+        {% for line in song.lyric %}
+            <p>{{ line.lineLyric }}</p>
+        {% endfor %}
+    {% else %}
+        <p>暂无歌词</p>
+    {% endif %}
+
+    <a class="back-link" href="{% url 'songs:song_list' %}">
+            返回歌曲列表
+    </a>
+    
+</main>
+</body>
+</html>
