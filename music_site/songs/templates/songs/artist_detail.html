@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ artist.name }} - 歌手详情</title>
+</head>
+
+<body>
+<header>
+    <h1>音乐网站</h1>
+
+    <nav>
+        <a href="{% url 'songs:song_list' %}">歌曲列表</a>
+        <a href="{% url 'songs:artists' %}">歌手列表</a>
+        <a href="{% url 'songs:search' %}">搜索</a>
+    </nav>
+</header>
+
+<main>
+    <h2>{{ artist.name }}</h2>
+    {% if artist.img_url %}
+        <img src="{{ artist.img_url }}" alt="{{ artist.name }}">
+    {% endif %}
+    <h3>歌手简介</h3>
+    <p>{{ artist.info }}</p>
+    <a class="back-link" href="{% url 'songs:artists' %}">
+        返回歌手列表
+    </a>
+</main>
+</body>
+</html>

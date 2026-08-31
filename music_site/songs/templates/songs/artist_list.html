@@ -1,13 +1,9 @@
-<!DOCTYPE html> <!-- http://127.0.0.1:8000/ -->
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音乐网站 - 歌曲列表</title>
-
-    <style>
-
-    </style>
+    <title>音乐网站 - 歌手列表</title>
 </head>
 
 <body>
@@ -19,44 +15,34 @@
         <a href="{% url 'songs:artists' %}">歌手列表</a>
         <a href="{% url 'songs:search' %}">搜索</a>
     </header>
-</body>
-
 <main>
-    <div>
-        <h2>全部歌曲</h2>
-        <span>
-            共 {{ page_obj.paginator.count }} 首歌曲
-        </span>
-    </div>
-
-    <!-- 歌曲列表 -->
+    <h2>全部歌手</h2>
+    <p>共 {{ page_obj.paginator.count }} 位歌手</p>
     {% if page_obj.object_list %}
-        <table>
-            <thead>
-                <tr>
-                    <th>序号</th>
-                    <th>歌曲</th>
-                    <th>歌手</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for song in page_obj.object_list %}
-                    <tr>
-                        <td>{{ page_obj.start_index|add:forloop.counter0 }}</td>
-                        <td>
-                            <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
-                            <a href="/songs/{{ song.song_id }}/">
-                                    {{ song.name }}
-                            </a>
-                        </td>
-                        <td>
-                            
-                            <a href="/artists/{{ artist.artist_id }}/">{{ song.artist.name }}</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>歌手</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artist in page_obj.object_list %}
+            <tr>
+                <td>{{ page_obj.start_index|add:forloop.counter0}}</td>
+                <td>
+                    {% if artist.img_url %}
+                    <img
+                    class="artist-avatar"
+                    src="{{ artist.img_url }}"
+                    alt="{{ artist.name }}"
+                    >
+                    {% endif %}
+
+                    <a href="/artists/{{ artist.artist_id }}/">{{ artist.name }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
     {% endif %}
 
     <!-- 分页 -->
@@ -81,5 +67,5 @@
         </div>
     {% endif %}
 </main>
-
+</body>
 </html>

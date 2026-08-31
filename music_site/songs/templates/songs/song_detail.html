@@ -12,10 +12,11 @@
 
     <nav>
         <a href="{% url 'songs:song_list' %}">歌曲列表</a>
-        <a href="#">歌手列表</a>
-        <a href="#">搜索</a>
+        <a href="{% url 'songs:artists' %}">歌手列表</a>
+        <a href="{% url 'songs:search' %}">搜索</a>
     </nav>
 </header>
+
 <main>
     {% if song.photo_url %}
     <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
