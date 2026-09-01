@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Django
+*.log
+db.sqlite3
+staticfiles/
+media/
+
+# 环境变量和敏感配置
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# 数据
+*.json
+# songs_data.json
+# artists_data.json
