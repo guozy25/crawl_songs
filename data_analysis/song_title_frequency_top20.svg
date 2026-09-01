@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="780" viewBox="0 0 1000 780">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f2937}.grid{stroke:#dbe3ef;stroke-dasharray:4 4}.bar{fill:#10b981}.label{font-size:15px}.value{font-size:13px}.title{font-size:22px;font-weight:600}</style>
+<text x="500.0" y="42" text-anchor="middle" class="title">歌曲标题中词频最高的20个词</text>
+<line x1="150.0" y1="90" x2="150.0" y2="725" class="grid"/>
+<text x="150.0" y="750" text-anchor="middle" class="value">0</text>
+<line x1="342.5" y1="90" x2="342.5" y2="725" class="grid"/>
+<text x="342.5" y="750" text-anchor="middle" class="value">50</text>
+<line x1="535.0" y1="90" x2="535.0" y2="725" class="grid"/>
+<text x="535.0" y="750" text-anchor="middle" class="value">101</text>
+<line x1="727.5" y1="90" x2="727.5" y2="725" class="grid"/>
+<text x="727.5" y="750" text-anchor="middle" class="value">152</text>
+<line x1="920.0" y1="90" x2="920.0" y2="725" class="grid"/>
+<text x="920.0" y="750" text-anchor="middle" class="value">202</text>
+<text x="136" y="110.1" text-anchor="end" class="label">都</text>
+<rect x="150" y="96.3" width="53.4" height="19.1" rx="2" class="bar"/>
+<text x="211.4" y="110.1" class="value">14</text>
+<text x="136" y="141.8" text-anchor="end" class="label">Mr</text>
+<rect x="150" y="128.1" width="57.2" height="19.1" rx="2" class="bar"/>
+<text x="215.2" y="141.8" class="value">15</text>
+<text x="136" y="173.6" text-anchor="end" class="label">一个</text>
+<rect x="150" y="159.8" width="57.2" height="19.1" rx="2" class="bar"/>
+<text x="215.2" y="173.6" class="value">15</text>
+<text x="136" y="205.3" text-anchor="end" class="label">想</text>
+<rect x="150" y="191.6" width="57.2" height="19.1" rx="2" class="bar"/>
+<text x="215.2" y="205.3" class="value">15</text>
+<text x="136" y="237.1" text-anchor="end" class="label">离开</text>
+<rect x="150" y="223.3" width="61.0" height="19.1" rx="2" class="bar"/>
+<text x="219.0" y="237.1" class="value">16</text>
+<text x="136" y="268.8" text-anchor="end" class="label">爱情</text>
+<rect x="150" y="255.1" width="61.0" height="19.1" rx="2" class="bar"/>
+<text x="219.0" y="268.8" class="value">16</text>
+<text x="136" y="300.6" text-anchor="end" class="label">花</text>
+<rect x="150" y="286.9" width="64.8" height="19.1" rx="2" class="bar"/>
+<text x="222.8" y="300.6" class="value">17</text>
+<text x="136" y="332.3" text-anchor="end" class="label">来</text>
+<rect x="150" y="318.6" width="68.6" height="19.1" rx="2" class="bar"/>
+<text x="226.6" y="332.3" class="value">18</text>
+<text x="136" y="364.1" text-anchor="end" class="label">The</text>
+<rect x="150" y="350.4" width="72.4" height="19.1" rx="2" class="bar"/>
+<text x="230.4" y="364.1" class="value">19</text>
+<text x="136" y="395.8" text-anchor="end" class="label">在</text>
+<rect x="150" y="382.1" width="76.2" height="19.1" rx="2" class="bar"/>
+<text x="234.2" y="395.8" class="value">20</text>
+<text x="136" y="427.6" text-anchor="end" class="label">I</text>
+<rect x="150" y="413.9" width="80.0" height="19.1" rx="2" class="bar"/>
+<text x="238.0" y="427.6" class="value">21</text>
+<text x="136" y="459.3" text-anchor="end" class="label">了</text>
+<rect x="150" y="445.6" width="83.9" height="19.1" rx="2" class="bar"/>
+<text x="241.9" y="459.3" class="value">22</text>
+<text x="136" y="491.1" text-anchor="end" class="label">人</text>
+<rect x="150" y="477.4" width="87.7" height="19.1" rx="2" class="bar"/>
+<text x="245.7" y="491.1" class="value">23</text>
+<text x="136" y="522.8" text-anchor="end" class="label">Love</text>
+<rect x="150" y="509.1" width="110.5" height="19.1" rx="2" class="bar"/>
+<text x="268.5" y="522.8" class="value">29</text>
+<text x="136" y="554.6" text-anchor="end" class="label">是</text>
+<rect x="150" y="540.9" width="110.5" height="19.1" rx="2" class="bar"/>
+<text x="268.5" y="554.6" class="value">29</text>
+<text x="136" y="586.3" text-anchor="end" class="label">Me</text>
+<rect x="150" y="572.6" width="125.8" height="19.1" rx="2" class="bar"/>
+<text x="283.8" y="586.3" class="value">33</text>
+<text x="136" y="618.1" text-anchor="end" class="label">爱</text>
+<rect x="150" y="604.4" width="339.3" height="19.1" rx="2" class="bar"/>
+<text x="497.3" y="618.1" class="value">89</text>
+<text x="136" y="649.8" text-anchor="end" class="label">我</text>
+<rect x="150" y="636.1" width="434.6" height="19.1" rx="2" class="bar"/>
+<text x="592.6" y="649.8" class="value">114</text>
+<text x="136" y="681.6" text-anchor="end" class="label">你</text>
+<rect x="150" y="667.9" width="556.5" height="19.1" rx="2" class="bar"/>
+<text x="714.5" y="681.6" class="value">146</text>
+<text x="136" y="713.3" text-anchor="end" class="label">的</text>
+<rect x="150" y="699.6" width="770.0" height="19.1" rx="2" class="bar"/>
+<text x="928.0" y="713.3" class="value">202</text>
+<text x="500.0" y="772" text-anchor="middle" class="value">总词频（歌曲标题去重音源版本后）</text>
+</svg>

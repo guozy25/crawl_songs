@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1120" viewBox="0 0 1100 1120">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#1f2937}.grid{stroke:#dbe3ef;stroke-dasharray:4 4}.bar-long{fill:#f97316}.bar-short{fill:#8b5cf6}.label{font-size:14px}.value{font-size:12px}.title{font-size:22px;font-weight:600}.panel-title{font-size:16px;font-weight:600}</style>
+<text x="550.0" y="38" text-anchor="middle" class="title">歌手平均歌词长度 Top 10</text>
+<text x="625.0" y="80.0" text-anchor="middle" class="panel-title">平均歌词最长的10位歌手</text>
+<line x1="250.0" y1="105.0" x2="250.0" y2="552.5" class="grid"/>
+<text x="250.0" y="574.5" text-anchor="middle" class="value">0</text>
+<line x1="437.5" y1="105.0" x2="437.5" y2="552.5" class="grid"/>
+<text x="437.5" y="574.5" text-anchor="middle" class="value">503</text>
+<line x1="625.0" y1="105.0" x2="625.0" y2="552.5" class="grid"/>
+<text x="625.0" y="574.5" text-anchor="middle" class="value">1,005</text>
+<line x1="812.5" y1="105.0" x2="812.5" y2="552.5" class="grid"/>
+<text x="812.5" y="574.5" text-anchor="middle" class="value">1,508</text>
+<line x1="1000.0" y1="105.0" x2="1000.0" y2="552.5" class="grid"/>
+<text x="1000.0" y="574.5" text-anchor="middle" class="value">2,010</text>
+<text x="238" y="132.6" text-anchor="end" class="label">Utada</text>
+<rect x="250" y="114.0" width="669.6" height="26.0" rx="2" class="bar-long"/>
+<text x="926.6" y="132.6" class="value">1794.7（20首）</text>
+<text x="238" y="177.4" text-anchor="end" class="label">JENNIE</text>
+<rect x="250" y="158.7" width="637.3" height="26.0" rx="2" class="bar-long"/>
+<text x="894.3" y="177.4" class="value">1708.1（19首）</text>
+<text x="238" y="222.1" text-anchor="end" class="label">SawanoHiroyuki[nZk]</text>
+<rect x="250" y="203.4" width="583.4" height="26.0" rx="2" class="bar-long"/>
+<text x="840.4" y="222.1" class="value">1563.5（20首）</text>
+<text x="238" y="266.9" text-anchor="end" class="label">ROSÉ</text>
+<rect x="250" y="248.2" width="563.3" height="26.0" rx="2" class="bar-long"/>
+<text x="820.3" y="266.9" class="value">1509.8（20首）</text>
+<text x="238" y="311.6" text-anchor="end" class="label">DJ OKAWARI</text>
+<rect x="250" y="292.9" width="559.4" height="26.0" rx="2" class="bar-long"/>
+<text x="816.4" y="311.6" class="value">1499.3（6首）</text>
+<text x="238" y="356.4" text-anchor="end" class="label">宋雨琦 (YUQI)</text>
+<rect x="250" y="337.7" width="519.9" height="26.0" rx="2" class="bar-long"/>
+<text x="776.9" y="356.4" class="value">1393.3（18首）</text>
+<text x="238" y="401.1" text-anchor="end" class="label">G-DRAGON</text>
+<rect x="250" y="382.4" width="435.0" height="26.0" rx="2" class="bar-long"/>
+<text x="692.0" y="401.1" class="value">1165.9（20首）</text>
+<text x="238" y="445.9" text-anchor="end" class="label">青山テルマ</text>
+<rect x="250" y="427.2" width="423.1" height="26.0" rx="2" class="bar-long"/>
+<text x="680.1" y="445.9" class="value">1133.9（20首）</text>
+<text x="238" y="490.6" text-anchor="end" class="label">當山みれい</text>
+<rect x="250" y="471.9" width="379.9" height="26.0" rx="2" class="bar-long"/>
+<text x="636.9" y="490.6" class="value">1018.2（19首）</text>
+<text x="238" y="535.4" text-anchor="end" class="label">ピノキオピー</text>
+<rect x="250" y="516.7" width="368.7" height="26.0" rx="2" class="bar-long"/>
+<text x="625.7" y="535.4" class="value">988.1（20首）</text>
+<text x="625.0" y="582.5" text-anchor="middle" class="panel-title">平均歌词最短的10位歌手</text>
+<line x1="250.0" y1="607.5" x2="250.0" y2="1055.0" class="grid"/>
+<text x="250.0" y="1077.0" text-anchor="middle" class="value">0</text>
+<line x1="437.5" y1="607.5" x2="437.5" y2="1055.0" class="grid"/>
+<text x="437.5" y="1077.0" text-anchor="middle" class="value">503</text>
+<line x1="625.0" y1="607.5" x2="625.0" y2="1055.0" class="grid"/>
+<text x="625.0" y="1077.0" text-anchor="middle" class="value">1,005</text>
+<line x1="812.5" y1="607.5" x2="812.5" y2="1055.0" class="grid"/>
+<text x="812.5" y="1077.0" text-anchor="middle" class="value">1,508</text>
+<line x1="1000.0" y1="607.5" x2="1000.0" y2="1055.0" class="grid"/>
+<text x="1000.0" y="1077.0" text-anchor="middle" class="value">2,010</text>
+<text x="238" y="635.1" text-anchor="end" class="label">矢野立美</text>
+<rect x="250" y="616.5" width="58.2" height="26.0" rx="2" class="bar-short"/>
+<text x="315.2" y="635.1" class="value">156.0（3首）</text>
+<text x="238" y="679.9" text-anchor="end" class="label">邓丽君</text>
+<rect x="250" y="661.2" width="69.2" height="26.0" rx="2" class="bar-short"/>
+<text x="326.2" y="679.9" class="value">185.5（20首）</text>
+<text x="238" y="724.6" text-anchor="end" class="label">高胜美</text>
+<rect x="250" y="706.0" width="92.3" height="26.0" rx="2" class="bar-short"/>
+<text x="349.3" y="724.6" class="value">247.3（20首）</text>
+<text x="238" y="769.4" text-anchor="end" class="label">韩宝仪</text>
+<rect x="250" y="750.7" width="93.7" height="26.0" rx="2" class="bar-short"/>
+<text x="350.7" y="769.4" class="value">251.2（18首）</text>
+<text x="238" y="814.1" text-anchor="end" class="label">陈百强</text>
+<rect x="250" y="795.5" width="94.7" height="26.0" rx="2" class="bar-short"/>
+<text x="351.7" y="814.1" class="value">253.8（20首）</text>
+<text x="238" y="858.9" text-anchor="end" class="label">刘珂矣</text>
+<rect x="250" y="840.2" width="107.0" height="26.0" rx="2" class="bar-short"/>
+<text x="364.0" y="858.9" class="value">286.9（19首）</text>
+<text x="238" y="903.6" text-anchor="end" class="label">王艳薇</text>
+<rect x="250" y="885.0" width="114.0" height="26.0" rx="2" class="bar-short"/>
+<text x="371.0" y="903.6" class="value">305.5（20首）</text>
+<text x="238" y="948.4" text-anchor="end" class="label">채연</text>
+<rect x="250" y="929.7" width="116.3" height="26.0" rx="2" class="bar-short"/>
+<text x="373.3" y="948.4" class="value">311.6（17首）</text>
+<text x="238" y="993.1" text-anchor="end" class="label">卓依婷</text>
+<rect x="250" y="974.5" width="116.4" height="26.0" rx="2" class="bar-short"/>
+<text x="373.4" y="993.1" class="value">311.9（20首）</text>
+<text x="238" y="1037.9" text-anchor="end" class="label">张国荣</text>
+<rect x="250" y="1019.2" width="116.8" height="26.0" rx="2" class="bar-short"/>
+<text x="373.8" y="1037.9" class="value">313.2（19首）</text>
+<text x="550.0" y="1112" text-anchor="middle" class="value">平均歌词长度（字符数，不含空格；仅统计有效歌词）</text>
+</svg>
