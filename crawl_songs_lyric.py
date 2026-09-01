@@ -40,7 +40,7 @@ for i in range(len(songs_data)):
     lyric = response.json().get("data").get("lrclist")
     songs_data[i]["lyric"] = lyric
 
-    sleep_time = random.uniform(0.1, 1)
+    sleep_time = random.uniform(0.1, 0.5)
     time.sleep(sleep_time)
     print(i)
 

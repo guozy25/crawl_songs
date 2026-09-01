@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Artist(models.Model):
+    url = models.URLField(max_length=100, default="http://127.0.0.1:8000/")
     artist_id = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=100)
     img_url = models.URLField(max_length=200)
@@ -14,6 +15,7 @@ class Artist(models.Model):
 
 
 class Song(models.Model):
+    url = models.URLField(max_length=100, default="http://127.0.0.1:8000/")
     song_id = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=100)
     artist_name = models.CharField(max_length=100)

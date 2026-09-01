@@ -6,19 +6,129 @@
     <title>音乐网站 - 歌曲列表</title>
 
     <style>
+        body {
+            margin: 0;
+            background: #f5f6fa;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            color: #333;
+        }
 
+        header {
+            padding: 20px 8%;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            color: #5b5ce2;
+        }
+
+        nav a {
+            margin-right: 24px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #5b5ce2;
+        }
+
+        main {
+            width: 84%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .search-form select,
+        .search-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .search-form input {
+            flex: 1;
+        }
+
+        .search-form button {
+            padding: 0 22px;
+            border: none;
+            border-radius: 5px;
+            background: #5b5ce2;
+            color: white;
+            cursor: pointer;
+        }
+
+        .result-list {
+            background: white;
+            border-radius: 8px;
+        }
+
+        .result-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .result-item img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .result-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .result-item a:hover {
+            color: #5b5ce2;
+        }
+
+        .pagination {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-block;
+            margin: 4px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .pagination .current {
+            background: #5b5ce2;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>音乐网站</h1>
-        <a class="active" href="{% url 'songs:song_list' %}"> <!-- songs是应用，song_list是视图函数名 -->
-            歌曲列表
-        </a>
+    <h1>音乐网站</h1>
+
+    <nav>
+        <a href="{% url 'songs:song_list' %}">歌曲列表</a>
         <a href="{% url 'songs:artists' %}">歌手列表</a>
         <a href="{% url 'songs:search' %}">搜索</a>
-    </header>
+    </nav>
+</header>
 </body>
 
 <main>
@@ -37,6 +147,7 @@
                     <th>序号</th>
                     <th>歌曲</th>
                     <th>歌手</th>
+                    <th>原始网站url</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,8 +161,10 @@
                             </a>
                         </td>
                         <td>
-                            
-                            <a href="/artists/{{ artist.artist_id }}/">{{ song.artist.name }}</a>
+                            <a href="/artists/{{ song.artist.artist_id }}/">{{ song.artist.name }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ song.url }}">点击跳转</a>
                         </td>
                     </tr>
                 {% endfor %}

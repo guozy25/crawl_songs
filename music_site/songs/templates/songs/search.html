@@ -161,7 +161,9 @@
             搜索“{{ keyword }}”的结果
             （共 {{ page_obj.paginator.count }} 条）
         </h3>
-
+        <p class="search-time">
+        后端搜索耗时：{{ search_time }} ms
+        </p>
         {% if page_obj.object_list %}
             <div class="result-list">
 

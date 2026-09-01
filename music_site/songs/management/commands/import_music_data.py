@@ -33,6 +33,7 @@ class Command(BaseCommand):
             Artist.objects.update_or_create(
                 artist_id=artist_id,#查找条件
                 defaults={
+                    "url": artist["url"],
                     "name": artist["name"].strip(),
                     "img_url": artist["img_url"].strip(),
                     "info": (artist.get("info") or "").strip(),
@@ -47,6 +48,7 @@ class Command(BaseCommand):
             Song.objects.update_or_create(
                 song_id=song_id,
                 defaults={
+                    "url": song["url"],
                     "name": song["song_name"],
                     "photo_url": song["song_photo"],
                     "lyric": song.get("lyric") or [],

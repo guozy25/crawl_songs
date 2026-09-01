@@ -48,22 +48,29 @@ for i in range(len(artists)):
         timeout=10
     )
     data = response.json()
-    song_name = data['data']['list'][0]['name']
-    song_id = data['data']['list'][0]['musicrid']
-    song_id = song_id.split("_")[1]
-    song_photo = data['data']['list'][0]['pic120']
 
-    songs.append({
-        "artist_id": artist_id,
-        "artist_name": artist.get("name"),
-        "song_name": song_name,
-        "song_id": song_id,
-        "song_photo": song_photo
-        })
-    print(i, song_name, song_id, artist.get("name"), artist_id)
+    for j in range(50):
+        if j >= len(data['data']['list']):
+            break
+        
+        song_name = data['data']['list'][j]['name']
+        song_id = data['data']['list'][j]['musicrid']
+        song_id = song_id.split("_")[1]
+        song_photo = data['data']['list'][j]['pic120']
 
+        songs.append({
+            "artist_id": artist_id,
+            "artist_name": artist.get("name"),
+            "song_name": song_name,
+            "song_id": song_id,
+            "song_photo": song_photo
+            })
+        print(count, song_name, song_id, artist.get("name"), artist_id)
+        count += 1
+        
     sleep_time = random.uniform(0.1, 1.0)
     time.sleep(sleep_time)
+    
     # count += 1
     # if count < 5:
     #     print(response.status_code)

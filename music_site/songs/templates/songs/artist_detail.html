@@ -4,6 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ artist.name }} - 歌手详情</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f5f6fa;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            color: #333;
+        }
+
+        header {
+            padding: 20px 8%;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            color: #5b5ce2;
+        }
+
+        nav a {
+            margin-right: 24px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #5b5ce2;
+        }
+
+        main {
+            width: 84%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .search-form select,
+        .search-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .search-form input {
+            flex: 1;
+        }
+
+        .search-form button {
+            padding: 0 22px;
+            border: none;
+            border-radius: 5px;
+            background: #5b5ce2;
+            color: white;
+            cursor: pointer;
+        }
+
+        .result-list {
+            background: white;
+            border-radius: 8px;
+        }
+
+        .result-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .result-item img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .result-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .result-item a:hover {
+            color: #5b5ce2;
+        }
+
+        .pagination {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-block;
+            margin: 4px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .pagination .current {
+            background: #5b5ce2;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,9 +136,92 @@
     {% endif %}
     <h3>歌手简介</h3>
     <p>{{ artist.info }}</p>
+    <h3>歌手原始网站url</h3>
+    <a href="{{ artist.url }}" target="_blank" rel="noopener noreferrer">
+        {{ artist.url }}
+    </a>
     <a class="back-link" href="{% url 'songs:artists' %}">
         返回歌手列表
     </a>
+    
+    <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>歌曲</th>
+                    <th>歌手</th>
+                    <th>原始网站url</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in page_obj.object_list %}
+                    <tr>
+                        <td>{{ page_obj.start_index|add:forloop.counter0 }}</td>
+                        <td>
+                            <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
+                            <a href="/songs/{{ song.song_id }}/">
+                                    {{ song.name }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/artists/{{ song.artist.artist_id }}/">{{ song.artist.name }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ song.url }}">点击跳转</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if page_obj.paginator.num_pages > 1 %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">首页</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">
+                        上一页
+                    </a>
+                {% else %}
+                    <span>首页</span>
+                    <span>上一页</span>
+                {% endif %}
+
+                {% for number in page_obj.paginator.page_range %}
+                    {% if number == page_obj.number %}
+                        <span class="current">{{ number }}</span>
+                    {% else %}
+                        <a href="?page={{ number }}">{{ number }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">
+                        下一页
+                    </a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">
+                        尾页
+                    </a>
+                {% else %}
+                    <span>下一页</span>
+                    <span>尾页</span>
+                {% endif %}
+            </div>
+
+            <form method="get" class="jump-form">
+                <label for="page">跳转到</label>
+                <input
+                    id="page"
+                    type="number"
+                    name="page"
+                    min="1"
+                    max="{{ page_obj.paginator.num_pages }}"
+                    required
+                >
+                <span>页</span>
+                <button type="submit">确定</button>
+            </form>
+        {% endif %}
+    
 </main>
 </body>
 </html>
