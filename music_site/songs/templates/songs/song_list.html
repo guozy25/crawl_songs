@@ -66,6 +66,21 @@
             cursor: pointer;
         }
 
+        .artist-name {
+        display: inline-block;
+        padding: 8px 14px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        background-color: white;
+        color: #555555;
+        text-decoration: none;
+        }
+        .artist-name:hover {
+        border-color: #5b5ce2;
+        background-color: #5b5ce2;
+        color: white;
+        }
+
         .result-list {
             background: white;
             border-radius: 8px;
@@ -116,6 +131,12 @@
             background: #5b5ce2;
             color: white;
         }
+
+        .song-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
     </style>
 </head>
 
@@ -155,16 +176,18 @@
                     <tr>
                         <td>{{ page_obj.start_index|add:forloop.counter0 }}</td>
                         <td>
+                            <div class="song-cell">
                             <img class="song-cover" src="{{ song.photo_url }}" alt="{{ song.name }}">
-                            <a href="/songs/{{ song.song_id }}/">
+                            <a class="artist-name" href="/songs/{{ song.song_id }}/">
                                     {{ song.name }}
                             </a>
+                            </div>
                         </td>
                         <td>
-                            <a href="/artists/{{ song.artist.artist_id }}/">{{ song.artist.name }}</a>
+                            <a class="artist-name" href="/artists/{{ song.artist.artist_id }}/">{{ song.artist.name }}</a>
                         </td>
                         <td>
-                            <a href="{{ song.url }}">点击跳转</a>
+                            <a class="artist-name" href="{{ song.url }}">点击跳转</a>
                         </td>
                     </tr>
                 {% endfor %}

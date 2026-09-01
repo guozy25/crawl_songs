@@ -38,6 +38,22 @@
             margin: 35px auto;
         }
 
+        .artist-name {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: white;
+    color: #555555;
+    text-decoration: none;
+    }
+
+        .artist-name:hover {
+    border-color: #5b5ce2;
+    background-color: #5b5ce2;
+    color: white;
+    }
+
         .search-form {
             display: flex;
             gap: 10px;
@@ -115,6 +131,12 @@
             background: #5b5ce2;
             color: white;
         }
+
+        .song-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
     </style>
 </head>
 
@@ -145,15 +167,19 @@
             <tr>
                 <td>{{ page_obj.start_index|add:forloop.counter0}}</td>
                 <td>
+                    <div class="song-cell">
                     {% if artist.img_url %}
+                    
                     <img
                     class="artist-avatar"
                     src="{{ artist.img_url }}"
                     alt="{{ artist.name }}"
                     >
+
                     {% endif %}
 
-                    <a href="/artists/{{ artist.artist_id }}/">{{ artist.name }}</a>
+                    <a class="artist-name" href="/artists/{{ artist.artist_id }}/">{{ artist.name }}</a>
+                    </div>
                 </td>
                 <td>{{ artist.song_count }} 首</td>
             </tr>
